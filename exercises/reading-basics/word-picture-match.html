@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Match | Reading Basics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body class="exercise-page">
+
+    <nav class="tool-nav">
+        <a href="/exercises/reading-basics/index.html" class="exit-btn">✕ Exit</a>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="score-display">Stars: <span id="starCount">0</span></div>
+    </nav>
+
+    <main class="container">
+        <header class="exercise-intro">
+            <h1>Word Picture Mix</h1>
+            <p id="instructionText">Read the word and find the matching picture!</p>
+        </header>
+
+        <div id="patternWrapper" class="pattern-sequence-container">
+            <!-- Target Word injected here -->
+        </div>
+
+        <section id="gameBoard" class="visual-grid">
+            <!-- Image choices injected here -->
+        </section>
+
+        <div id="feedbackArea"></div>
+    </main>
+
+    <script type="module" src="/js/exercises/word-match-logic.js"></script>
+</body>
+</html>

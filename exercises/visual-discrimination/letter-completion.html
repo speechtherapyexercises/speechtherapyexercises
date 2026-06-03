@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Completion - Visual Discrimination</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tools.css">
+</head>
+<body class="exercise-page">
+
+    <nav class="tool-nav">
+        <div class="nav-left">
+            <a href="index.html" class="back-btn">← Exit Game</a>
+        </div>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="nav-right">
+            <div class="score-display">Stars: <span id="starCount">0</span></div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="exercise-intro">
+            <h2>Complete the Word!</h2>
+            <p>Which letter is missing? Choose the right one to finish the word.</p>
+        </header>
+
+        <!-- The Target Display: Image on top, Word on bottom -->
+        <div id="targetArea" class="word-display-box completion-layout">
+           <div class="image-container">
+        <!-- Added style="display: none" so it stays hidden until JS loads an image -->
+        <img id="targetImage" src="" alt="" style="max-height: 120px; width: auto; margin-bottom: 10px; display: none;">
+         </div>
+         <div id="wordDisplay">
+        <!-- Text like C _ T injected here -->
+     </div>
+        </div>
+
+        <!-- The letter options -->
+        <section id="gameBoard" class="visual-grid word-grid">
+            <!-- Letters injected by JS -->
+        </section>
+
+        <div id="feedbackArea">
+            Select the correct letter!
+        </div>
+    </main>
+
+    <script type="module" src="../../js/exercises/letter-completion-logic.js"></script>
+</body>
+</html>

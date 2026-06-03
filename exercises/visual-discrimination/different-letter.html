@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different Letter Finder - Visual Discrimination</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/tools.css">
+</head>
+<body class="exercise-page">
+
+    <nav class="tool-nav">
+        <div class="nav-left">
+            <a href="index.html" class="back-btn">← Exit Game</a>
+        </div>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="nav-right">
+            <div class="score-display">Stars: <span id="starCount">0</span></div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="exercise-intro">
+            <h2>Find the Different Letter</h2>
+            <p>One of these letters is not like the others. Can you find it?</p>
+        </header>
+
+        <!-- Target letter area: identical to letter completion but for the reference letter -->
+        <div id="targetArea" class="word-display-box completion-layout">
+            <!-- JS will inject "Target: b" here -->
+        </div>
+
+        <!-- The options: forced into 4 columns -->
+        <section id="gameBoard" class="visual-grid four-column-grid" style="margin-top: 30px;">
+            <!-- 4 letter cards injected by JS -->
+        </section>
+
+        <div id="feedbackArea">
+            Find the letter that is different!
+        </div>
+    </main>
+
+    <!-- Logic script -->
+    <script type="module" src="../../js/exercises/different-letter-logic.js"></script>
+</body>
+</html>

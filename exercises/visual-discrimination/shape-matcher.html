@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Matcher | Visual Discrimination</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body class="exercise-page">
+
+    <!-- Simple Tool Header - Matches Odd-One-Out -->
+    <nav class="tool-nav">
+        <a href="/exercises.html" class="exit-btn">✕ Exit Game</a>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="score-display">Stars: <span id="starCount">0</span></div>
+    </nav>
+
+    <main class="container">
+        <header class="exercise-intro">
+            <h1>Shape Matcher</h1>
+            <p>Find the matching letter shape!</p>
+        </header>
+
+        <!-- Target letter area (The "Big" Letter) -->
+        <div id="targetArea">
+            <!-- Data injected via JS -->
+        </div>
+
+        <!-- The Game Area - Added visual-grid for the CSS we discussed -->
+        <section id="gameBoard" class="visual-grid">
+            <!-- Cards will be injected here by JavaScript -->
+        </section>
+
+        <div id="feedbackArea" class="feedback-text"></div>
+    </main>
+
+    <!-- Script Location matches your folder structure -->
+    <script type="module" src="../../js/exercises/shape-matcher-logic.js"></script>
+</body>
+</html>

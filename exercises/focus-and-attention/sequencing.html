@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequencing Master | Focus & Attention</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body class="exercise-page">
+
+    <!-- Navigation Area -->
+    <nav class="tool-nav">
+        <a href="/exercises/focus-and-attention/index.html" class="exit-btn">✕ Exit</a>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="score-display">Stars: <span id="starCount">0</span></div>
+    </nav>
+
+    <main class="container">
+        <!-- Instruction Section -->
+        <header class="exercise-intro">
+            <h1>Sequencing Master</h1>
+            <p id="instructionText">Look at the sequence. What comes next?</p>
+        </header>
+
+        <!-- Sequence Display Area -->
+        <div id="patternWrapper" class="pattern-sequence-container">
+            <!-- JavaScript will inject the sequence here -->
+        </div>
+
+        <!-- The Selection Area -->
+        <section id="gameBoard" class="visual-grid">
+            <!-- JavaScript will inject Choice Cards here -->
+        </section>
+
+        <!-- Dynamic Feedback Text -->
+        <div id="feedbackArea"></div>
+    </main>
+
+    <!-- Logic Script -->
+    <script type="module" src="/js/exercises/sequencing-logic.js"></script>
+</body>
+</html>

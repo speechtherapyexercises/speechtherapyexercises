@@ -1,0 +1,673 @@
+/* ROOT VARIABLES - The 'Source of Truth' */
+:root {
+    /* Color Palette - Kid-Friendly but Professional */
+    --primary-blue: #4A90E2;    /* Main brand color */
+    --success-green: #57C785;   /* Correct answers / Support */
+    --accent-orange: #FF9F43;   /* Interactive elements / Exercises */
+    --text-dark: #2D3436;       /* Soft black for readability */
+    --bg-light: #F9FBFF;        /* Very soft blue-white background */
+    --white: #FFFFFF;
+
+    /* Typography */
+    --font-main: 'Quicksand', sans-serif; /* Rounded and legible */
+    
+    /* Spacing & Borders */
+    --radius-lg: 20px;          /* For main containers */
+    --radius-md: 12px;          /* For buttons and cards */
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Navigation Bar Styling */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Stays above all game elements */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 4.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+/* Container for centering content */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 20px 0 140px;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f9fbff 100%);
+    text-align: center;
+}
+
+.hero-logo-wrapper {
+    margin-top: -15px;
+    margin-bottom: -25px; /* Pulls text up into logo's empty white spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo {
+    max-height: 460px; /* Gives your logo a prominent, premium centerpiece size */
+    width: auto;       /* Keeps proportions completely locked and safe */
+    display: block;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.05)); /* Soft shadow drop to blend it into the gradient */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-top: 0;
+    margin-bottom: 12px; /* Balanced spacing directly beneath header text */
+    letter-spacing: 0;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 1;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-orange);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    margin-left: 15px;
+}
+
+/* Feature Grid Section */
+.features {
+    padding: 80px 0;
+    background: #ffffff;
+    margin-top: 0;
+}
+
+.features-homepage-adjust {
+    padding-top: 110px;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 1px;
+    font-size: 2rem;
+    color: var(--primary-blue); /* Designer match: Echoes Hero Blue */
+}
+
+/* Direct connection bridge rule between H2 and Grid */
+.features h2 + .feature-grid {
+    margin-top: 30px; /* Tightens gap down cleanly from 140px */
+}
+
+.feature-grid {
+    display: grid;
+    /* Expanded min-card value to 330px to force 2-line runway for text descriptions */
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 40px;
+    margin-bottom: 0;
+}
+
+.feature-grid.home-grid {
+    margin-bottom: 140px;
+    gap: 35px; /* Enhanced breathing room between your home layout feature items */
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-item .icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.65rem;
+    margin-bottom: 12px;
+    color: var(--accent-orange); /* Designer match: Energetic Primary Orange */
+    white-space: nowrap;          /* Forces headings to always strictly occupy 1 single line */
+}
+
+.feature-item p {
+    font-size: 1.05rem;       /* Sized flawlessly to guarantee an elegant 2-line layout stack */
+    line-height: 1.5;
+    max-width: 340px;         /* Constrains horizontal box range beautifully */
+    margin: 0 auto;           /* Centers the balanced paragraph text inside column containers */
+}
+
+/* Generic Content Header */
+.content-header {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.content-header h1 {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #636e72;
+}
+
+/* Mission Layout */
+.mission-body {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    align-items: flex-start;
+}
+
+.mission-text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 35px; /* Spacing between the hugging cards */
+}
+
+/* Unified Card Styling with Modern Touches */
+.mission-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06); /* Subtle gray frame */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    position: relative; /* Essential for exact tag placement positioning */
+}
+
+.mission-card h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: var(--text-dark, #333);
+}
+
+.mission-card ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.mission-card li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.mission-card li:last-child {
+    margin-bottom: 0;
+}
+
+/* Sidebar Box adjusted to match the gray-framed aesthetic */
+.support-box {
+    flex: 1;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+/* Form Styles */
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto 80px;
+    min-height: 480px; /* Keeps spacing consistent when form disappears */
+}
+
+.pro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 2px solid #dfe6e9;
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+/* --- CONTACT PAGE ONLY --- */
+.container .content-header h1,
+.container .content-header .subtitle,
+.contact-layout h2,
+.contact-layout .info-card p {
+    color: var(--text-dark); /* Forces uniform dark slate black */
+}
+
+.contact-layout h2,
+.contact-layout .info-card p {
+    text-align: center;
+}
+
+.contact-layout .contact-info {
+    margin-bottom: 40px; /* Space below info card container */
+}
+
+.container .content-header h1 {
+    font-size: 2.4rem; /* Balanced centerpiece header size */
+    margin-bottom: 12px;
+}
+
+.container .content-header .subtitle {
+    font-size: 1.1rem; /* Matches sidebar text size */
+    font-weight: 500;
+}
+
+.contact-layout .info-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.contact-layout .info-card p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Success Message Toggle */
+.hidden-msg {
+    display: none;
+    background: var(--success-green);
+    color: white;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.show-msg {
+    display: block !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.logo-link {
+    text-decoration: none; 
+    color: inherit; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+}
+
+/* Information Grid Layout */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+    grid-auto-rows: 1fr;
+}
+
+/* Plain Info Cards */
+.info-card-plain {
+    background: var(--white);
+    padding: 30px 25px; 
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    border-top: 4px solid #dfe6e9; 
+    transition: transform 0.3s ease;
+}
+
+.info-card-plain h3 {
+    margin: 15px 0 10px;
+    color: var(--text-dark);
+    font-size: 1.3rem; 
+}
+
+.info-card-plain p {
+    font-size: 1rem;
+    color: #57606f;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.card-note {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--primary-blue);
+}
+
+/* Category Tags */
+.info-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tag-speech { background: #e0f2fe; color: #0369a1; }
+.tag-reading { background: #fef3c7; color: #92400e; }
+.tag-vision { background: #dcfce7; color: #166534; }
+.tag-math { background: #f3e8ff; color: #6b21a8; }
+.tag-focus { background: #ffedd5; color: #9a3412; }
+
+/* Disclaimer Box Styling */
+.disclaimer-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 25px;
+    border-radius: var(--radius-md);
+    margin: 40px 0 80px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.disclaimer-box.landing-disclaimer {
+    margin: 140px auto 80px auto;
+    text-align: center;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #dfe6e9;
+}
+
+/* Breadcrumb / Back Navigation */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+/* Resources Hub Section Styling */
+.resources-hub {
+    padding: 100px 0;
+    background: #ffffff;
+    text-align: center;
+    margin-top: 0; 
+    border-top: 1px solid #ffffff;
+}
+
+.resources-hub h2 {
+    font-size: 2.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 50px;
+}
+
+.hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hub-item {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.hub-item .icon {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hub-item h3 {
+    font-size: 1.65rem;
+    margin-bottom: 15px;
+    color: var(--accent-orange); /* Designer match: Tied into the primary brand orange */
+}
+
+.hub-item p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.hub-item .btn-outline {
+    margin-left: 0; 
+    margin-top: auto; 
+}
+
+/* Home Page Disclaimer Wrap Gradient */
+.disclaimer-section-wrap {
+    background: linear-gradient(135deg, #fff3e0 0%, #fefbe6 100%);
+    padding: 140px 10px; /* Trimmed side padding from 20px to 10px for extra runway */
+    width: 100%;
+    margin-top: 0; 
+    border: none;
+}
+
+/* CHANGE THIS BLOCK */
+.disclaimer-section-wrap .landing-disclaimer {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1020px;       /* Changed from 850px to unlock the horizontal space */
+    text-align: center;
+}
+
+/* CHANGE THIS BLOCK */
+.disclaimer-section-wrap .landing-disclaimer p {
+    font-size: 1.25rem;      /* Changed from 1.1rem to match caregiver text exactly */
+    color: var(--text-dark);
+    max-width: 100%;         
+    line-height: 1.7;        /* Clean, matching line height */
+    margin: 0 auto;          
+}
+
+/* Exercise Page Grid Custom Layout */
+.exercise-layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto 100px auto;
+}
+
+/* Caregiver Guidance Banner Styling */
+.caregiver-guidance {
+    text-align: center;
+    line-height: 1.8;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    background: linear-gradient(135deg, #e6f7f0 0%, #f9fbff 100%); 
+    padding: 100px 20px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.caregiver-guidance p {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    max-width: 1020px;   /* Widened slightly to give words more horizontal runway */
+    line-height: 1.7;   /* Sleeked down just a tiny bit to balance the 4-line stack */
+    margin: 0 auto;
+}
+
+/* --- FOOTER STYLING --- */
+footer {
+    background-color: transparent;
+    padding: 40px 0;
+    text-align: center;      
+    margin-top: 20px;
+    width: 100%;
+}
+
+footer p {
+    color: #636e72;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Library Footnote Reference */
+.library-footnote {
+    font-size: 0.85rem;
+    color: #636e72;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+.mission-card .card-note {
+    margin-top: 20px;
+    font-size: 1.1rem; /* or 1.1rem if you want it slightly larger */
+    line-height: 1.6;
+}
+
+/* Gives the 4-column layout extra room on desktops to prevent card shrinking */
+/* Keeps cards at their perfect, un-shrunk desktop size and centers the grid */
+@media (min-width: 1250px) {
+    .exercise-layout-grid.four-columns {
+        grid-template-columns: repeat(4, 280px); /* Locks each card to its perfect width */
+        justify-content: center;                  /* Centers the entire 4-card row on the page */
+        max-width: 1350px;                        
+        margin: 40px auto 100px auto;             
+        padding: 0 20px;
+    }
+}
+
+/* Styling for the new direct email card contact option */
+.contact-form-container .card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-form-container a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* New: Smaller, focused mission card */
+/* Update your compact card to match the grid cards */
+/* New: Smaller, focused mission card - RESTORED VISUALS & ALIGNMENT */
+/* Keep this ONLY. Delete the other .mission-card-compact blocks. */
+.mission-card-compact {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    width: 95%;              /* A comfortable width */
+    max-width: 1200px;       /* Matches your grid */
+    margin: 40px auto;       /* Centers it */
+}
+
+.mission-card-compact .card-note {
+    font-size: 1.1rem; /* Increased from 1.1rem */
+    line-height: 1.5;   /* Slightly increased to keep it readable at the larger size */
+}
+
+.mission-card-compact h2 {
+    margin-top: 0;
+    margin-bottom: 12px; /* Increased from 15px to give it more "breathing" space */
+    font-size: 1.3rem;    /* Slightly larger to make it pop as a header */
+    color: #2D3436; /* Optional: Use your brand color to make it stand out */
+}
+
+/* This targets the card ONLY when it is inside a 'main' container */
+main .mission-card-compact {
+    width: 100%;       /* It will fill the available space of the main container */
+    max-width: none;   /* It doesn't need its own width limit, it obeys the container */
+    margin: 0 auto 40px auto; 
+}
+
+.tag-privacy {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.library-page .mission-text .mission-card {
+    margin-bottom: 40px;
+}
+
+/* Ensure the last card on the Library page doesn't have extra bottom space */
+.library-page .mission-text .mission-card:last-child {
+    margin-bottom: 0;
+}

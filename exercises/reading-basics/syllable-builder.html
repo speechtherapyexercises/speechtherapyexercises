@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllable Builder | Reading Basics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body class="exercise-page">
+
+    <nav class="tool-nav">
+        <a href="/exercises/reading-basics/index.html" class="exit-btn">✕ Exit</a>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="score-display">Stars: <span id="starCount">0</span></div>
+    </nav>
+
+    <main class="container">
+        <header class="exercise-intro">
+            <h1>Syllable Builder</h1>
+            <p id="instructionText">Tap the parts to build the word!</p>
+        </header>
+
+        <div id="patternWrapper" class="pattern-sequence-container">
+            <!-- Target Image and Syllable Slots -->
+        </div>
+
+        <section id="gameBoard" class="visual-grid">
+            <!-- Syllable blocks -->
+        </section>
+
+        <div id="feedbackArea"></div>
+    </main>
+
+    <script type="module" src="/js/exercises/syllable-builder-logic.js"></script>
+</body>
+</html>

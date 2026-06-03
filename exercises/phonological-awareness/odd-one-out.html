@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd One Out | Phonological Awareness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<body class="exercise-page">
+
+    <!-- Simple Tool Header -->
+    <nav class="tool-nav">
+        <a href="/exercises.html" class="exit-btn">✕ Exit Game</a>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="score-display">Stars: <span id="starCount">0</span></div>
+    </nav>
+
+    <main class="container">
+        <header class="exercise-intro">
+            <h1>Find the Odd One Out</h1>
+            <p>Which one starts with a different sound?</p>
+        </header>
+
+        <!-- The Game Area -->
+        <section id="gameBoard" class="game-grid-4">
+            <!-- Cards will be injected here by JavaScript -->
+        </section>
+
+        <div id="feedbackArea" class="feedback-text"></div>
+    </main>
+
+    <!-- Scripts -->
+    <script type="module" src="/js/exercises/phonological-logic.js"></script></body>
+</html>

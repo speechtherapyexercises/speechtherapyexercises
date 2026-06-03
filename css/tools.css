@@ -1,0 +1,521 @@
+/* --- 1. THE HUB / CATEGORY MENU STYLES --- */
+.hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.category-card {
+    text-decoration: none;
+    color: inherit;
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 8px solid var(--card-color); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card-icon { font-size: 4rem; margin-bottom: 10px; }
+.category-card h2 { font-size: 1.5rem; color: var(--text-dark); }
+.category-card p { font-size: 0.95rem; color: #636e72; margin-bottom: 20px; }
+
+.btn-sm {
+    padding: 10px 20px;
+    background-color: var(--card-color);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+/* --- 2. GAME INTERFACE (THE TOOL SHELL) --- */
+.exercise-page { background-color: #f0f4f8; }
+
+.tool-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.exercise-page main.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh; 
+    min-height: 85vh;
+}
+
+.exercise-intro {
+    text-align: center;
+    height: 120px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* --- 3. THE GAME BOARD & CARDS --- */
+#gameBoard {
+    width: 100%;
+    max-width: 850px; /* Slightly wider to accommodate 4 cards comfortably */
+    min-height: auto; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Mobile default */
+    gap: 20px;
+}
+
+/* Desktop Logic: Here is the fix */
+@media (min-width: 600px) {
+    /* If the board has 4 items (Odd One Out) */
+    #gameBoard:has(.game-card-item:nth-child(4)) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* If the board only has 3 items (Rhyme Matcher) */
+    #gameBoard:not(:has(.game-card-item:nth-child(4))) {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 700px; /* Keeps 3 cards from getting too stretched */
+    }
+}
+
+.game-card-item {
+    background: white;
+    padding: 30px 15px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, border 0.2s;
+    border: 4px solid transparent; 
+}
+
+.game-card-item:hover {
+    transform: translateY(-5px);
+    background-color: #f8f9fa;
+}
+
+.item-icon { font-size: 4rem; }
+.item-name { font-weight: 700; margin-top: 10px; color: var(--primary-blue); }
+
+#feedbackArea {
+    margin-top: 30px;
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* --- 4. PROGRESS & SCORING --- */
+.progress-container {
+    width: 50%;
+    height: 12px;
+    background: #eef2f3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--success-green);
+    transition: width 0.4s ease;
+}
+
+.score-display { font-weight: 700; color: var(--accent-orange); min-width: 80px; }
+
+/* --- 5. ANIMATIONS & WIN STATE --- */
+.correct-bounce { 
+    animation: bounce 0.5s ease; 
+    border: 4px solid var(--success-green) !important; 
+}
+.wrong-shake { 
+    animation: shake 0.4s ease; 
+    border: 4px solid #ff7675 !important; 
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+}
+
+.win-screen {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    width: 100%;
+}
+
+/* Targets the winning icon across ALL games universally */
+.win-screen .win-icon {
+    font-size: 5.5rem !important; /* Overrides any tiny defaults or mixed inline sizes */
+    margin-bottom: 20px;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* --- 6. RHYME MATCHER SPECIFIC --- */
+#targetArea {
+    background: var(--white);
+    border: 6px solid var(--primary-blue); 
+    border-radius: 25px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px; 
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+}
+
+#targetArea .item-icon { font-size: 5.5rem; }
+#targetArea .item-name {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- SYLLABLE CLAPPER SPECIFIC --- */
+.number-grid {
+    display: flex !important; /* Use flex instead of grid for a centered row */
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.number-card {
+    background: white;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    border-radius: 50%; /* Circular buttons */
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    border: 4px solid var(--primary-blue);
+    color: var(--primary-blue);
+    transition: all 0.2s ease;
+}
+
+.number-card:hover {
+    transform: scale(1.1);
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* --- 7. VISUAL DISCRIMINATION SPECIFIC --- */
+
+/* Targets the board only when it has the .visual-grid class */
+#gameBoard.visual-grid {
+    max-width: 650px;    /* Keeps the 4 cards from spreading too wide */
+    min-height: auto;    /* Overrides the default 280px height */
+    gap: 15px;           /* Tighter spacing between cards */
+    margin-top: 10px;
+}
+
+/* Targets the individual cards within the visual-grid */
+.visual-grid .game-card-item {
+    padding: 15px 10px;  /* Reduced from 30px to make them shorter */
+    min-height: 120px;   /* A nice compact height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure the letter inside stays large */
+.visual-grid .item-icon {
+    font-size: 3.5rem;   /* Large enough to see clearly */
+    margin: 0;           /* Remove extra spacing */
+}
+
+/* The Big Target Letter at the top */
+.large-display {
+    font-size: 6rem !important;
+    font-weight: 700;
+    color: var(--primary-blue);
+    line-height: 1;
+}
+
+/* --- LETTER TRACKING EXCLUSIVE STYLES --- */
+
+/* Only targets the grid for this specific game */
+.tracking-grid .game-card-item.found {
+    background-color: #e8f5e9 !important; 
+    border: 3px solid var(--success-green) !important;
+    color: var(--success-green) !important;
+    transform: scale(0.95);
+    pointer-events: none;
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.3);
+}
+
+/* Specific icon color for found items in this game */
+.tracking-grid .game-card-item.found .item-icon {
+    color: var(--success-green) !important;
+}
+
+/* --- 8. LETTER TRACKING LAYOUT & GRID --- */
+
+/* Forces the 4x2 layout specifically for this game */
+#gameBoard.tracking-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important; 
+    max-width: 600px; 
+    gap: 12px;
+    margin: 10px auto;
+}
+
+/* Adjusts card height to fit the 8-card grid better */
+.tracking-grid .game-card-item {
+    padding: 10px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Slightly smaller icons so 4 fit across easily */
+.tracking-grid .item-icon {
+    font-size: 3rem;
+}
+
+/* Mobile Responsiveness: Switches to 2x4 on small screens */
+@media (max-width: 500px) {
+    #gameBoard.tracking-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* --- 9. WORD SPOTTING EXCLUSIVE --- */
+
+/* 1. Make the Target Word Box prominent and centered */
+#targetArea.word-display-box {
+    background: white;
+    border: 6px solid var(--primary-blue);
+    border-radius: 20px;
+    padding: 20px 60px;
+    font-size: 3.5rem; /* Makes the target word nice and big */
+    font-weight: 800;
+    color: var(--primary-blue);
+    margin: 0 auto 40px auto; /* Centers it and adds space below */
+    box-shadow: var(--shadow);
+    min-width: 250px;
+    text-align: center;
+}
+
+/* 2. Fix the 2x2 Grid alignment and size */
+#gameBoard.word-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Forces 2 columns */
+    max-width: 600px !important; /* Keeps boxes from becoming "huge" */
+    margin: 0 auto; /* Centers the whole grid on the page */
+    gap: 20px;
+}
+
+/* 3. Style the word cards to be wider and shorter */
+.word-grid .game-card-item {
+    padding: 20px 10px;
+    min-height: 80px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 4. Adjust the font size of the words inside the cards */
+.word-grid .item-icon {
+    font-size: 2rem; /* Big enough to read, but fits the box */
+    letter-spacing: 1px;
+}
+
+/* Lock board interaction during level transitions */
+.level-complete {
+    pointer-events: none;
+}
+
+/* --- 10. LETTER COMPLETION LAYOUT FIXES --- */
+
+/* 1. Ensure the box expands with the word and stacks the image */
+.word-display-box.completion-layout {
+    display: flex !important;
+    flex-direction: column !important; /* Stack image over word */
+    align-items: center;
+    justify-content: center;
+    min-width: 320px; /* Gives it a solid base width */
+    width: fit-content; /* Allows it to grow if the word is long */
+    padding: 20px 40px; /* Extra horizontal room */
+}
+
+/* 2. The magic line that prevents the word from splitting */
+#wordDisplay {
+    white-space: nowrap !important; /* Forces text to stay on one line */
+    display: block !important;
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 5px; /* Adds nice breathing room between letters */
+}
+
+/* 3. Ensure the image doesn't push the word out of the box */
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Only affects grids with the .text-mode class */
+/* --- 11. SENTENCE MATCHING (TEXT-ONLY) SPECIFIC --- */
+
+/* Targets the grid for text-based responses */
+.visual-grid.text-mode {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    max-width: 800px !important;
+    gap: 25px;
+}
+
+.visual-grid.text-mode .game-card-item {
+    /* Matching your existing .game-card-item but optimized for text */
+    padding: 25px; 
+    min-height: 140px; /* Forces a taller, more "square" look for text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px; /* Matches your standard games */
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.visual-grid.text-mode .game-card-item div {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+/* Ensure the sentence display box is wide and clear */
+.sentence-display {
+    background: white;
+    border: 6px solid #6c5ce7; /* Sentence Match Theme Color */
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* --- 12. GLOBAL BUTTON POLISHING --- */
+.btn-sm {
+    text-decoration: none !important;
+    display: inline-block; /* Ensures padding and margins behave correctly */
+    transition: background-color 0.2s ease;
+}
+
+.btn-sm:hover {
+    text-decoration: none !important;
+    filter: brightness(0.9); /* Subtle feedback when hovering */
+}
+
+/* --- 13. HUB HEADER ALIGNMENT --- */
+.hub-header {
+    text-align: center;      /* Centers the text */
+    padding: 40px 20px;      /* Gives it some nice vertical room */
+    width: 100%;             /* Ensures it takes up the full width of the container */
+}
+
+.hub-header h1 {
+    margin-bottom: 10px;     /* Space between title and subtitle */
+}
+
+/* Specific layout override for the Letter Tracking grid */
+/* Fix for Image Cards in Growth Sequence */
+.tracking-grid .game-card-item {
+    padding: 0 !important; /* Remove padding so image fills the whole card */
+    min-height: 150px;     /* Set a clear height */
+    aspect-ratio: 1 / 1;   /* Forces them to be square */
+}
+
+/* 1. Only the Top Slots (patternWrapper) keep the dashed border */
+#patternWrapper .game-card-item {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #aaa; 
+    border-radius: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 2. The Bottom Choice Grid images have NO border */
+.tracking-grid .game-card-item {
+    width: 200px;
+    height: 200px;
+    border: none; /* This removes the border */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* 3. Containers remain the same */
+#patternWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.tracking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Apply the corner fix ONLY to Rotation game cards */
+.rotation-card {
+    overflow: hidden;
+    padding: 0 !important; /* Ensures the image hits the exact edges */
+    border-radius: 20px;
+}
+
+/* Ensure the image respects the container */
+.rotation-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keeps the full image visible within the square */
+}
