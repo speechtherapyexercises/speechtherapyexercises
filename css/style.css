@@ -671,3 +671,27 @@ main .mission-card-compact {
 .library-page .mission-text .mission-card:last-child {
     margin-bottom: 0;
 }
+
+/* Mobile Optimization for style.css */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1.1rem; padding: 0 15px; }
+
+    .main-nav {
+        padding: 0.75rem 10px; /* Reduce padding to save screen space */
+    }
+    
+    .nav-links {
+        gap: 1rem; /* Reduce the space between links */
+        font-size: 0.9rem; /* Slightly smaller text for mobile */
+    }
+    
+    .feature-grid, .hub-grid {
+        grid-template-columns: 1fr !important; /* Force single column */
+        gap: 20px;
+    }
+    
+    .mission-body {
+        flex-direction: column; /* Stack text and sidebar */
+    }
+}
