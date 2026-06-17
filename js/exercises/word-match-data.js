@@ -16,7 +16,7 @@ export const wordMatchLevels = [
     { id: 12, word: "MOON", choices: ["☀️", "☁️", "🌙", "🌍"], correct: "🌙", instruction: "Find the moon!" },
     { id: 13, word: "STAR", choices: ["☄️", "☀️", "🌙", "⭐"], correct: "⭐", instruction: "Find the star!" },
     { id: 14, word: "TREE", choices: ["🌻", "🌲", "🌵", "🌿"], correct: "🌲", instruction: "Find the tree!" },
-    { id: 15, word: "LEAF", choices: ["🌸", "🍂", "🍃", "🪵"], correct: "🍃", instruction: "Find the leaf!" },
+    { id: 15, word: "LEAF", choices: ["🌸", "🍎", "🍃", "🪵"], correct: "🍃", instruction: "Find the leaf!" },
     { id: 16, word: "RAIN", choices: ["☀️", "❄️", "🌧️", "💨"], correct: "🌧️", instruction: "Find the rain!" },
     { id: 17, word: "SNOW", choices: ["🔥", "❄️", "💧", "🌈"], correct: "❄️", instruction: "Find the snow!" },
     { id: 18, word: "FIRE", choices: ["🧊", "💧", "🔥", "💨"], correct: "🔥", instruction: "Find the fire!" },
@@ -28,8 +28,8 @@ export const wordMatchLevels = [
     { id: 22, word: "HAT", choices: ["👟", "👕", "👒", "🧤"], correct: "👒", instruction: "Find the hat!" },
     { id: 23, word: "PEN", choices: ["✏️", "🖌️", "🖊️", "📏"], correct: "🖊️", instruction: "Find the pen!" },
     { id: 24, word: "KEY", choices: ["🔒", "🔑", "🛡️", "🔦"], correct: "🔑", instruction: "Find the key!" },
-    { id: 25, word: "BAG", choices: ["💼", "🎒", "👜", "🛍️"], correct: "🎒", instruction: "Find the bag!" },
-    { id: 26, word: "FAN", choices: ["💡", "🔦", "🌀", "🧊"], correct: "🌀", instruction: "Find the fan!" },
+    { id: 25, word: "BAG", choices: ["🎒", "🍎", "🐶", "🚗"], correct: "🎒", instruction: "Find the bag!" },
+    { id: 26, word: "FAN", choices: ["💡", "🔦", "🪭", "🧊"], correct: "🪭", instruction: "Find the fan!" },
     { id: 27, word: "POT", choices: ["🍽️", "🥄", "🥘", "🍴"], correct: "🥘", instruction: "Find the pot!" },
     { id: 28, word: "JAR", choices: ["🥣", "🍯", "🍷", "🥃"], correct: "🍯", instruction: "Find the jar!" },
     { id: 29, word: "MAP", choices: ["📜", "🗺️", "📑", "📖"], correct: "🗺️", instruction: "Find the map!" },
@@ -41,7 +41,7 @@ export const wordMatchLevels = [
     { id: 33, word: "BUS", choices: ["🚗", "🚲", "✈️", "🚌"], correct: "🚌", instruction: "Find the bus!" },
     { id: 34, word: "CAR", choices: ["🚲", "🚗", "🚁", "🚂"], correct: "🚗", instruction: "Find the car!" },
     { id: 35, word: "SHIP", choices: ["🛶", "🚤", "🚢", "⛵"], correct: "🚢", instruction: "Find the ship!" },
-    { id: 36, word: "JET", choices: ["🚁", "✈️", "🚀", "🛰️"], correct: "✈️", instruction: "Find the jet!" },
+    { id: 36, word: "PLANE", choices: ["🚁", "✈️", "🚀", "🛰️"], correct: "✈️", instruction: "Find the plane!" },
     { id: 37, word: "VAN", choices: ["🚲", "🛵", "🚐", "🚜"], correct: "🚐", instruction: "Find the van!" },
     { id: 38, word: "BIKE", choices: ["🛴", "🚲", "🏍️", "🛹"], correct: "🚲", instruction: "Find the bike!" },
 
@@ -59,5 +59,4 @@ export const wordMatchLevels = [
     { id: 47, word: "BALL", choices: ["⚽", "🎾", "🏀", "🏐"], correct: "⚽", instruction: "Find the ball!" },
     { id: 48, word: "BELL", choices: ["🎺", "🥁", "🔔", "🎸"], correct: "🔔", instruction: "Find the bell!" },
     { id: 49, word: "DRUM", choices: ["🎹", "🎻", "🥁", "🎷"], correct: "🥁", instruction: "Find the drum!" },
-    { id: 50, word: "FLAG", choices: ["🏳️", "🚩", "🏴", "🏁"], correct: "🚩", instruction: "Find the flag!" }
-];
+    { id: 50, word: "FLAG", choices: ["🍎", "🚩", "🚲", "🚗"], correct: "🚩", instruction: "Find the flag!" }];
