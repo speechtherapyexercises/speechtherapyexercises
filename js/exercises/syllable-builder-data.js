@@ -49,9 +49,11 @@ export const syllableBuilderLevels = [
     { id: 43, image: "🚑", word: "AMBULANCE", parts: ["AM", "BU", "LANCE"], options: ["LANCE", "AM", "BU"], instruction: "Build AMBULANCE." },
     { id: 44, image: "🌂", word: "UMBRELLA", parts: ["UM", "BREL", "LA"], options: ["LA", "UM", "BREL"], instruction: "Build UMBRELLA." },
     { id: 45, image: "🥣", word: "CEREAL", parts: ["CE", "RE", "AL"], options: ["AL", "CE", "RE"], instruction: "Build CEREAL." },
+    { id: 51, image: "🦛", word: "HIPPOPOTAMUS", parts: ["HIP", "PO", "POT", "A", "MUS"], options: ["MUS", "HIP", "PO", "POT", "A"], instruction: "Build HIPPOPOTAMUS." },
     { id: 46, image: "🦅", word: "ALBATROSS", parts: ["AL", "BA", "TROSS"], options: ["TROSS", "AL", "BA"], instruction: "Build ALBATROSS." },
     { id: 47, image: "🥑", word: "AVOCADO", parts: ["AV", "O", "CA", "DO"], options: ["CA", "AV", "DO", "O"], instruction: "Build AVOCADO." },
     { id: 48, image: "🛶", word: "CANOEING", parts: ["CA", "NOE", "ING"], options: ["ING", "CA", "NOE"], instruction: "Build CANOEING." },
     { id: 49, image: "🌋", word: "VOLCANO", parts: ["VOL", "CA", "NO"], options: ["NO", "VOL", "CA"], instruction: "Build VOLCANO." },
+    { id: 52, image: "👨‍🚀", word: "ASTRONAUT", parts: ["AS", "TRO", "NAU", "T"], options: ["T", "AS", "TRO", "NAU"], instruction: "Build ASTRONAUT." },
     { id: 50, image: "🦋", word: "BUTTERFLY", parts: ["BUT", "TER", "FLY"], options: ["FLY", "BUT", "TER"], instruction: "Build BUTTERFLY." }
 ];
