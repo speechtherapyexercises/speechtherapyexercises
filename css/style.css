@@ -417,6 +417,7 @@ input:focus, textarea:focus {
 .tag-vision { background: #dcfce7; color: #166534; }
 .tag-math { background: #f3e8ff; color: #6b21a8; }
 .tag-focus { background: #ffedd5; color: #9a3412; }
+.tag-expert { background: #fef3c7; color: #92400e; }
 
 /* Disclaimer Box Styling */
 .disclaimer-box {
