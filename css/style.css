@@ -696,3 +696,22 @@ main .mission-card-compact {
         flex-direction: column; /* Stack text and sidebar */
     }
 }
+/* Container for the Facebook part */
+.community-link-wrapper {
+    margin-top: 30px; /* Space between the email and this section */
+    text-align: center;
+}
+
+/* The Facebook Icon */
+/* The Facebook Icon - UPDATED WIDTH */
+.fb-icon {
+    display: block;      
+    width: 60px;         /* Match the new SVG width */
+    margin: 15px auto 0; /* Space between the "Or visit" text and the icon */
+    transition: transform 0.2s ease;
+}
+
+.fb-icon:hover {
+    transform: scale(1.1); 
+    opacity: 0.8;
+}
