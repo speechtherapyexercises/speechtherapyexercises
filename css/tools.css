@@ -586,26 +586,31 @@
 /* --- FIX FOR SYLLABLE COMPLETION (ONLY FOR THIS GAME) --- */
 
 /* 1. Force the parent container to be centered and constrained */
-#syllable-game-page .completion-layout {
-    width: 100% !important;
-    max-width: 400px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+/* --- FINAL CLS STABILIZATION (ONLY FOR THIS GAME) --- */
+
+/* 1. Reserve space for the Target Area (Image + Word) */
+#syllable-game-page #targetArea {
+    min-height: 220px !important; 
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
 }
 
-/* 2. Ensure the image container stays centered */
+/* 2. Reserve space for the Game Board (Options) */
+#syllable-game-page #gameBoard {
+    min-height: 180px !important; 
+}
+
+/* 3. Force the image container to maintain its size even before loading */
 #syllable-game-page .image-container {
+    min-height: 120px !important;
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
-    min-height: 120px;
 }
 
-/* 3. Force the word display box to sit in the middle */
+/* 4. Ensure the word display itself is centered and stable */
 #syllable-game-page #wordDisplay {
     width: auto !important;
     margin: 0 auto !important;
