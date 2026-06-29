@@ -580,3 +580,35 @@
         font-size: 0.9rem !important; /* Smaller font to fit 6 across */
     }
 }
+
+/* --- FIX FOR SYLLABLE COMPLETION LAYOUT SHIFT --- */
+
+/* --- FIX FOR SYLLABLE COMPLETION (ONLY FOR THIS GAME) --- */
+
+/* 1. Force the parent container to be centered and constrained */
+#syllable-game-page .completion-layout {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 2. Ensure the image container stays centered */
+#syllable-game-page .image-container {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    min-height: 120px;
+}
+
+/* 3. Force the word display box to sit in the middle */
+#syllable-game-page #wordDisplay {
+    width: auto !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    display: block !important;
+}
