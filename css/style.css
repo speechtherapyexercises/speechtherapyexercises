@@ -718,11 +718,14 @@ main .mission-card-compact {
 
 .author-box {
     margin-top: 40px;
-    padding: 35px; /* Matches the padding of .mission-card */
+    padding: 35px;
     background: #ffffff;
-    border-radius: 16px; /* Matches the radius of .mission-card */
-    border: 1px solid rgba(0, 0, 0, 0.06); /* Matches the border of .mission-card */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02); /* Matches the shadow of .mission-card */
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    /* Essential for flex containment */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .author-box h3 {
@@ -738,7 +741,11 @@ main .mission-card-compact {
 
 .author-box img {
     margin-top: 20px;
-    max-width: 100%;
+    width: 100%;        /* It will expand to fit the card */
+    max-width: 500px;   /* It will stop expanding at 500px, which is a nice portrait size */
     height: auto;
+    display: block;
+    margin-left: auto;  /* Centers the image */
+    margin-right: auto;
     border-radius: var(--radius-md);
 }
