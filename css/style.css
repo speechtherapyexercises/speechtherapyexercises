@@ -715,3 +715,30 @@ main .mission-card-compact {
     transform: scale(1.1); 
     opacity: 0.8;
 }
+
+.author-box {
+    margin-top: 40px;
+    padding: 35px; /* Matches the padding of .mission-card */
+    background: #ffffff;
+    border-radius: 16px; /* Matches the radius of .mission-card */
+    border: 1px solid rgba(0, 0, 0, 0.06); /* Matches the border of .mission-card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02); /* Matches the shadow of .mission-card */
+}
+
+.author-box h3 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.author-box p {
+    margin: 15px 0; /* Ensures consistent vertical spacing for multiple paragraphs */
+    line-height: 1.7; /* Matches your preferred readability */
+    color: var(--text-dark);
+}
+
+.author-box img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+}
