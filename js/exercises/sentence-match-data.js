@@ -57,5 +57,17 @@ export const sentenceMatchLevels = [
     { id: 47, sentence: "I smell with my ___.", options: ["nose", "feet", "mouth"], correct: "nose", instruction: "How do you smell?" },
     { id: 48, sentence: "I taste with my ___.", options: ["tongue", "finger", "ear"], correct: "tongue", instruction: "How do you taste?" },
     { id: 49, sentence: "A cake is ___.", options: ["sweet", "salty", "sour"], correct: "sweet", instruction: "How does cake taste?" },
-    { id: 50, sentence: "Friends like to ___.", options: ["play", "fight", "hide"], correct: "play", instruction: "What do friends do?" }
+    { id: 50, sentence: "Friends like to ___.", options: ["play", "fight", "hide"], correct: "play", instruction: "What do friends do?" },
+    { id: 51, sentence: "Birds build a ___.", options: ["nest", "car", "desk"], correct: "nest", instruction: "Where do birds live?" },
+    { id: 52, sentence: "I wear gloves on my ___.", options: ["hands", "feet", "ears"], correct: "hands", instruction: "Where do gloves go?" },
+    { id: 53, sentence: "Fire is very ___.", options: ["hot", "cold", "wet"], correct: "hot", instruction: "How does fire feel?" },
+    { id: 55, sentence: "We read a ___.", options: ["book", "shoe", "tree"], correct: "book", instruction: "What do you read?" },
+    { id: 56, sentence: "The ocean is very ___.", options: ["deep", "small", "dry"], correct: "deep", instruction: "How deep is the ocean?" },
+    { id: 57, sentence: "A lion is a wild ___.", options: ["animal", "plant", "house"], correct: "animal", instruction: "What is a lion?" },
+    { id: 58, sentence: "I write on a piece of ___.", options: ["paper", "rock", "brick"], correct: "paper", instruction: "What do you write on?" },
+    { id: 59, sentence: "The wind makes trees ___.", options: ["shake", "fly", "swim"], correct: "shake", instruction: "What does wind do to trees?" },
+    { id: 60, sentence: "Ice is very ___.", options: ["cold", "hot", "loud"], correct: "cold", instruction: "How does ice feel?" },
+    { id: 61, sentence: "A banana is yellow and ___.", options: ["sweet", "salty", "rough"], correct: "sweet", instruction: "How does a banana taste?" },
+    { id: 63, sentence: "A chef works in a ___.", options: ["kitchen", "garden", "garage"], correct: "kitchen", instruction: "Where does a chef work?" },
+    { id: 64, sentence: "Birds have feathers and ___.", options: ["wings", "wheels", "horns"], correct: "wings", instruction: "What do birds use to fly?" }
 ];

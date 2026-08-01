@@ -48,5 +48,22 @@ export const imageSentenceLevels = [
     { id: 47, image: "🐚", options: ["The shell is on the sand.", "The rock is in the mud.", "The leaf is on the grass."], correct: "The shell is on the sand.", instruction: "Where is the shell?" },
     { id: 48, image: "🦒", options: ["The giraffe has a long neck.", "The elephant has a trunk.", "The lion has a mane."], correct: "The giraffe has a long neck.", instruction: "Describe the animal." },
     { id: 49, image: "🎨", options: ["I like to paint.", "I like to sing.", "I like to dance."], correct: "I like to paint.", instruction: "What do you like?" },
-    { id: 50, image: "🦋", options: ["The butterfly is pretty.", "The moth is brown.", "The bee is yellow."], correct: "The butterfly is pretty.", instruction: "Look at the wings." }
+    { id: 50, image: "🦋", options: ["The butterfly is pretty.", "The moth is brown.", "The bee is yellow."], correct: "The butterfly is pretty.", instruction: "Look at the wings." },
+    { id: 51, image: "🐶", options: ["The puppy is small.", "The whale is huge.", "The snake is long."], correct: "The puppy is small.", instruction: "Describe the animal." },
+    { id: 52, image: "🧀", options: ["The cheese is yellow.", "The milk is white.", "The bread is brown."], correct: "The cheese is yellow.", instruction: "Look at the food." },
+    { id: 53, image: "🐼", options: ["The panda eats bamboo.", "The lion eats meat.", "The rabbit eats grass."], correct: "The panda eats bamboo.", instruction: "What does the panda eat?" },
+    { id: 54, image: "🐯", options: ["The tiger has stripes.", "The leopard has spots.", "The bear has fur."], correct: "The tiger has stripes.", instruction: "Look at the pattern." },
+    { id: 55, image: "🍉", options: ["The watermelon is juicy.", "The cracker is dry.", "The lemon is sour."], correct: "The watermelon is juicy.", instruction: "Describe the fruit." },
+    { id: 56, image: "🐰", options: ["The bunny has long ears.", "The pig has a short tail.", "The elephant has a trunk."], correct: "The bunny has long ears.", instruction: "Look at the animal." },
+    { id: 60, image: "🥞", options: ["The pancakes are flat.", "The ball is round.", "The box is square."], correct: "The pancakes are flat.", instruction: "What shape are they?" },
+    { id: 61, image: "🦊", options: ["The fox is clever.", "The owl is wise.", "The bear is strong."], correct: "The fox is clever.", instruction: "Describe the animal." },
+    { id: 62, image: "🍇", options: ["The grapes are purple.", "The banana is yellow.", "The lime is green."], correct: "The grapes are purple.", instruction: "Look at the fruit color." },
+    { id: 63, image: "🐨", options: ["The koala climbs trees.", "The fish swims in water.", "The bird flies high."], correct: "The koala climbs trees.", instruction: "What is the koala doing?" },
+    { id: 64, image: "🍔", options: ["The burger has a bun.", "The soup has noodles.", "The taco has a shell."], correct: "The burger has a bun.", instruction: "Look at the meal." },
+    { id: 65, image: "🦉", options: ["The owl stays up at night.", "The rooster wakes up early.", "The bear sleeps all winter."], correct: "The owl stays up at night.", instruction: "When is it active?" },
+    { id: 66, image: "🍓", options: ["The strawberry has tiny seeds.", "The orange has thick skin.", "The peach has a fuzzy peel."], correct: "The strawberry has tiny seeds.", instruction: "Look at the outside." },
+    { id: 67, image: "🍿", options: ["The popcorn is crunchy.", "The pudding is smooth.", "The jelly is jiggly."], correct: "The popcorn is crunchy.", instruction: "How does it feel to eat?" },
+    { id: 68, image: "🍩", options: ["The donut has a hole inside.", "The cookie is flat all over.", "The muffin is domed on top."], correct: "The donut has a hole inside.", instruction: "Look at the shape." },
+    { id: 69, image: "🍒", options: ["The cherry is sweet.", "The cherry is salty.", "The cherry is hot."], correct: "The cherry is sweet.", instruction: "How does the cherry taste?" },
+    { id: 70, image: "🍪", options: ["The cookie is sweet.", "The cookie is sour.", "The cookie is salty."], correct: "The cookie is sweet.", instruction: "How does the cookie taste?" }
 ];

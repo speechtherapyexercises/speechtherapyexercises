@@ -10,6 +10,10 @@ export const completionLevels = [
     { word: "pen", display: "p _ n", correct: "e", options: ["e", "a", "i", "o"], icon: "🖊️" },
     { word: "hat", display: "h _ t", correct: "a", options: ["a", "o", "e", "i"], icon: "🎩" },
     { word: "fox", display: "f _ x", correct: "o", options: ["o", "a", "u", "e"], icon: "🦊" },
+    { word: "cow", display: "c _ w", correct: "o", options: ["o", "a", "u", "e"], icon: "🐮" },
+    { word: "bee", display: "b _ e", correct: "e", options: ["e", "a", "i", "o"], icon: "🐝" },
+    { word: "car", display: "c _ r", correct: "a", options: ["a", "o", "u", "e"], icon: "🚗" },
+    { word: "egg", display: "e _ g", correct: "g", options: ["g", "p", "t", "b"], icon: "🥚" },
 
     // --- 4 Letter Words ---
     { word: "fish", display: "f _ sh", correct: "i", options: ["i", "e", "a", "y"], icon: "🐟" },
@@ -32,6 +36,15 @@ export const completionLevels = [
     { word: "leaf", display: "l _ af", correct: "e", options: ["e", "a", "i", "o"], icon: "🍃" },
     { word: "sock", display: "s _ ck", correct: "o", options: ["o", "u", "a", "e"], icon: "🧦" },
     { word: "tent", display: "t _ nt", correct: "e", options: ["e", "a", "i", "o"], icon: "⛺" },
+    { word: "bear", display: "b _ ar", correct: "e", options: ["e", "a", "i", "o"], icon: "🐻" },
+    { word: "pear", display: "p _ ar", correct: "e", options: ["e", "a", "i", "o"], icon: "🍐" },
+    { word: "door", display: "d _ or", correct: "o", options: ["o", "a", "u", "e"], icon: "🚪" },
+    { word: "kite", display: "k _ te", correct: "i", options: ["i", "e", "a", "o"], icon: "🪁" },
+    { word: "lion", display: "li _ n", correct: "o", options: ["o", "a", "e", "u"], icon: "🦁" },
+    { word: "soup", display: "s _ up", correct: "o", options: ["o", "a", "e", "u"], icon: "🥣" },
+    { word: "wolf", display: "w _ lf", correct: "o", options: ["o", "a", "u", "e"], icon: "🐺" },
+    { word: "corn", display: "c _ rn", correct: "o", options: ["o", "a", "e", "u"], icon: "🌽" },
+    { word: "ring", display: "r _ ng", correct: "i", options: ["i", "e", "a", "o"], icon: "💍" },
 
     // --- 5+ Letter Words ---
     { word: "train", display: "tr _ in", correct: "a", options: ["a", "e", "o", "u"], icon: "🚆" },
@@ -53,5 +66,15 @@ export const completionLevels = [
     { word: "cloud", display: "cl _ ud", correct: "o", options: ["o", "a", "u", "e"], icon: "☁️" },
     { word: "grape", display: "gr _ pe", correct: "a", options: ["a", "e", "o", "u"], icon: "🍇" },
     { word: "brush", display: "br _ sh", correct: "u", options: ["u", "o", "a", "e"], icon: "🖌️" },
-    { word: "spider", display: "sp _ der", correct: "i", options: ["i", "e", "a", "o"], icon: "🕷️" }
+    { word: "spider", display: "sp _ der", correct: "i", options: ["i", "e", "a", "o"], icon: "🕷️" },
+    { word: "tiger", display: "t _ ger", correct: "i", options: ["i", "e", "a", "o"], icon: "🐅" },
+    { word: "lemon", display: "l _ mon", correct: "e", options: ["e", "a", "i", "o"], icon: "🍋" },
+    { word: "chair", display: "ch _ ir", correct: "a", options: ["a", "e", "o", "u"], icon: "🪑" },
+    { word: "sheep", display: "sh _ ep", correct: "e", options: ["e", "a", "i", "o"], icon: "🐑" },
+    { word: "melon", display: "m _ lon", correct: "e", options: ["e", "a", "i", "o"], icon: "🍈" },
+    { word: "plant", display: "pl _ nt", correct: "a", options: ["a", "e", "o", "u"], icon: "🪴" },
+    { word: "zebra", display: "z _ bra", correct: "e", options: ["e", "a", "i", "o"], icon: "🦓" },
+    { word: "pizza", display: "p _ zza", correct: "i", options: ["i", "e", "a", "o"], icon: "🍕" },
+    { word: "horse", display: "h _ rse", correct: "o", options: ["o", "a", "e", "u"], icon: "🐴" },
+    { word: "candy", display: "c _ ndy", correct: "a", options: ["a", "e", "o", "u"], icon: "🍬" }
 ];
